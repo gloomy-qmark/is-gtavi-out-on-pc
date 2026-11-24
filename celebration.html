@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is GTA VI on PC already?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- Fireworks library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="celebration.css">
+</head>
+<body>
+  <!-- Background Looping Audio -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="flower.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Audio Toggle Button (Fixed Minimalist Pill) -->
+  <button id="audioToggleBtn" class="audio-toggle-btn" title="Toggle Music">
+    <svg id="audioIconPlaying" class="audio-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
+    <svg id="audioIconMuted" class="audio-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+    <span id="audioStatusText">MUSIC ON</span>
+  </button>
+
+  <!-- Top Warning Bar -->
+  <header class="top-banner">
+    <details class="banner-details">
+      <summary class="banner-summary">
+        <span class="banner-summary-text">
+          AS OF <span id="currentDateSlot">24.11</span>, GTA&nbsp;VI <u>IS FINALLY WORKING ON PC!</u>
+        </span>
+        <span class="banner-arrow" aria-hidden="true">▾</span>
+      </summary>
+      <div class="banner-content">
+        <p>OFFICIAL PC PORT HAS BEEN RELEASED BY TAKE-TWO AND ROCKSTAR GAMES. DOWNLOAD ONLY FROM OFFICIAL PLATFORMS AND VERIFIED LAUNCHERS.</p>
+      </div>
+    </details>
+  </header>
+
+  <!-- Hero Screen: Exactly 100vh viewport -->
+  <section class="hero-screen">
+    <div class="hero-content">
+      <h2 class="question-text">Is GTA VI on PC already?</h2>
+
+      <!-- The YES! image -->
+      <div class="yes-wrapper">
+        <img src="yes.png" alt="YES!" class="vice-city-img">
+      </div>
+
+      <!-- Status Cards -->
+      <div class="status-grid">
+        <div class="status-card">
+          <h3 class="status-title">Take-Two PC port</h3>
+          <p class="status-value status-na">Released. Official PC port is now live and playable worldwide.</p>
+        </div>
+
+        <div class="status-card">
+          <h3 class="status-title">Fan-made Projects</h3>
+          <p class="status-desc">Projects retired. Official PC release superseded all community ports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Below the fold: Today's Insights Section -->
+  <main id="insights" class="insights-container">
+    <section class="insights-section">
+      <!-- Centered Header -->
+      <h3 class="insights-heading">Today's insights</h3>
+      
+      <!-- Centered Search -->
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search insights..." autocomplete="off">
+      </div>
+
+      <!-- Centered Minimalist Filters -->
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-category="ALL">ALL</button>
+        <button class="filter-btn" data-category="OFFICIAL">OFFICIAL</button>
+        <button class="filter-btn" data-category="PROJECTS STATUS">PROJECTS STATUS</button>
+        <button class="filter-btn" data-category="TRUSTED SOURCE">TRUSTED SOURCE</button>
+        <button class="filter-btn" data-category="DISCORD/TELEGRAM">DISCORD/TELEGRAM</button>
+        <button class="filter-btn" data-category="RUMOR/NO PROOFS">RUMOR/NO PROOFS</button>
+      </div>
+
+      <!-- Insights Cards List (Rendered dynamically via app.js) -->
+      <div class="insights-list" id="insightsList"></div>
+
+      <!-- Empty state -->
+      <div id="noResults" class="no-results" style="display: none;">
+        No insights matching your criteria.
+      </div>
+    </section>
+  </main>
+
+  <!-- Legal & Disclaimer Footer -->
+  <footer class="site-footer">
+    <p class="disclaimer-text">
+      This website is an independent tracker. It does not provide links to pirated materials, cracked binaries, or copyright-infringing downloads. This project is not affiliated with, endorsed by, or connected to Rockstar Games or Take-Two Interactive Software, Inc. All trademarks belong to their respective owners.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="celebration.js"></script>
+</body>
+</html>
